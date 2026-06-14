@@ -10,8 +10,6 @@ function formatTime(seconds) {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
-
-
 async function fetchNowPlaying() {
     try {
         const response = await fetch(API_URL);
