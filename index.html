@@ -31,28 +31,12 @@
                 </div>
             </div>
         </div>
-        <div class="radio-controls">
-            <button type="button" title="Play" aria-label="Play" class="btn p-0 radio-control-play-button btn-xl">
-                <svg viewBox="0 0 24 24" class="icon" fill="currentColor" focusable="false" aria-hidden="true" width="1.2em" height="1.2em">
-                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2M9.5 16.5v-9l7 4.5z"></path>
-                </svg>
-            </button>
-            <div class="radio-control-select-stream"><!---->
+        <div class="player-controls">
 
-            </div>
-            <div class="radio-control-volume d-flex align-items-center">
-                <div class="flex-shrink-0 mx-2">
-                    <button type="button" class="btn p-0 text-secondary" aria-label="Mute">
-                        <svg viewBox="0 0 24 24" class="icon" fill="currentColor" focusable="false" aria-hidden="true" width="1.2em" height="1.2em">
-                            <path fill="currentColor" d="M18.5 12A4.5 4.5 0 0 0 16 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02M5 9v6h4l5 5V4L9 9z"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex-fill radio-control-volume-slider">
-                    <input type="range" title="Volume" class="form-range" min="0" max="100" step="1">
-                </div>
-            </div>
-        </div>
+        <button id="playPauseBtn">▶</button>
+
+        <input type="range" id="volumeSlider" min="0" max="100" value="30">
+      </div>
     </div>
     <div id="recentlyplayed">
 

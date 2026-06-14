@@ -10,6 +10,49 @@ function formatTime(seconds) {
     return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
+try {
+    await audio.play();
+    playPauseBtn.textContent = '❚❚';
+}
+catch (err) {
+    console.log('Autoplay blocked');
+}
+
+const playPauseBtn =
+    document.getElementById('playPauseBtn');
+
+const volumeSlider =
+    document.getElementById('volumeSlider');
+
+playPauseBtn.addEventListener('click', async () => {
+
+    if (audio.paused) {
+
+        try {
+            await audio.play();
+            playPauseBtn.textContent = '❚❚';
+        }
+        catch (err) {
+            console.error(err);
+        }
+
+    } else {
+
+        audio.pause();
+        playPauseBtn.textContent = '▶';
+
+    }
+
+});
+
+volumeSlider.addEventListener('input', () => {
+
+    audio.volume =
+        volumeSlider.value / 100;
+
+});
+
+
 async function fetchNowPlaying() {
     try {
         const response = await fetch(API_URL);

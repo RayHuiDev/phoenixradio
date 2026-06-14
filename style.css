@@ -53,8 +53,9 @@ body::before {
 
 #media {
     display: flex;
-    gap: 16px;
+    gap: 30px;
     align-items: center;
+    
 }
 
 .now-playing-art {
@@ -64,11 +65,7 @@ body::before {
 .album_art {
     width: 90px;
     height: 90px;
-
-    border-radius: 10px;
     object-fit: cover;
-
-    border: 1px solid rgba(255, 255, 255, 0);
 }
 
 .now-playing-main {
