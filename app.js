@@ -94,22 +94,27 @@ const playPauseBtn = document.getElementById("playPauseBtn");
 const volumeSlider = document.getElementById("volumeSlider");
 
 audio.volume = volumeSlider.value / 100;
-// play/pause button
-playPauseBtn.addEventListener("click", () => {
-    if (audio.paused) {
-        audio.play();
-        playPauseBtn.innerHTML = "❚❚";
-    } else {
-        audio.pause();
-        playPauseBtn.innerHTML = "▶";
+
+let isPlaying = false;
+playPauseBtn.addEventListener("click", async () => {
+    try {
+        if (isPlaying) {
+            audio.pause();
+            playPauseBtn.textContent = "▶";
+            isPlaying = false;
+        } else {
+            await audio.play();
+            playPauseBtn.textContent = "❚❚";
+            isPlaying = true;
+        }
+    } catch (err) {
+        console.error(err);
     }
 });
 
-// volume control
 volumeSlider.addEventListener("input", () => {
     audio.volume = volumeSlider.value / 100;
 });
-
 // Initial load
 fetchNowPlaying();
 
