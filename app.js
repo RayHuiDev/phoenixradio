@@ -89,6 +89,39 @@ function updateProgress() {
     ).style.width = `${percent}%`;
 }
 
+const audio = document.getElementById("bgMusic");
+const playPauseBtn = document.getElementById("playPauseBtn");
+const volumeSlider = document.getElementById("volumeSlider");
+
+audio.volume = volumeSlider.value / 100;
+
+// autoplay
+window.addEventListener("load", async () => {
+    try {
+        await audio.play();
+        playPauseBtn.innerHTML = "❚❚";
+    } catch (err) {
+        console.log("Autoplay blocked by browser");
+        playPauseBtn.innerHTML = "▶";
+    }
+});
+
+// play/pause button
+playPauseBtn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseBtn.innerHTML = "❚❚";
+    } else {
+        audio.pause();
+        playPauseBtn.innerHTML = "▶";
+    }
+});
+
+// volume control
+volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value / 100;
+});
+
 // Initial load
 fetchNowPlaying();
 
