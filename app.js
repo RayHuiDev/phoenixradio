@@ -94,18 +94,6 @@ const playPauseBtn = document.getElementById("playPauseBtn");
 const volumeSlider = document.getElementById("volumeSlider");
 
 audio.volume = volumeSlider.value / 100;
-
-// autoplay
-window.addEventListener("load", async () => {
-    try {
-        await audio.play();
-        playPauseBtn.innerHTML = "❚❚";
-    } catch (err) {
-        console.log("Autoplay blocked by browser");
-        playPauseBtn.innerHTML = "▶";
-    }
-});
-
 // play/pause button
 playPauseBtn.addEventListener("click", () => {
     if (audio.paused) {
