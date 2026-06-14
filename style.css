@@ -28,6 +28,9 @@ body::before {
     background: rgba(0,0,0,0.65);
     z-index: -1;
 }
+#radiospace {
+    gap:40px;
+}
 
 #radio-container {
     width: 650px;

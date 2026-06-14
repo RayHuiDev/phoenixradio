@@ -8,39 +8,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="radio-container">
-        <h3 id="title">Radio Phoenix</h3>
-        <div id="media">
-            <div class="now-playing-art">
-                <img class="album_art" src="https://radio.nerdyjohnny.com/api/station/radio_phoenix/art/5395b525da49543534e9f950" 
-                loading="lazy" alt="">
-            </div>
-            <div class="now-playing-main">
-                <div>
-                    <h4 class="now-playing-title"></h4>
-                    <h5 class="now-playing-artist"></h5>
+    <div id="radiospace">
+        <div id="radio-container">
+            <h3 id="title">Radio Phoenix</h3>
+            <div id="media">
+                <div class="now-playing-art">
+                    <img class="album_art" src="https://radio.nerdyjohnny.com/api/station/radio_phoenix/art/5395b525da49543534e9f950" 
+                    loading="lazy" alt="">
                 </div>
-                <div class="time-display">
-                    <div class="time-display-played text-secondary"></div>
-                    <div class="time-display-progress">
-                        <div class="progress h-5">
-                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 75.4464%;"></div>
-                        </div>
+                <div class="now-playing-main">
+                    <div>
+                        <h4 class="now-playing-title"></h4>
+                        <h5 class="now-playing-artist"></h5>
                     </div>
-                    <div class="time-display-total text-secondary"></div>
+                    <div class="time-display">
+                        <div class="time-display-played text-secondary"></div>
+                        <div class="time-display-progress">
+                            <div class="progress h-5">
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 75.4464%;"></div>
+                            </div>
+                        </div>
+                        <div class="time-display-total text-secondary"></div>
+                    </div>
                 </div>
             </div>
+            <div class="player-controls">
+
+                <button id="playPauseBtn">▶</button>
+
+                <input type="range" id="volumeSlider" min="0" max="100" value="30">
+            </div>
         </div>
-        <div class="player-controls">
+        <div id="recentlyplayed">
 
-            <button id="playPauseBtn">▶</button>
-
-            <input type="range" id="volumeSlider" min="0" max="100" value="30">
         </div>
-    </div>
-    <br>
-    <div id="recentlyplayed">
-
     </div>
 
     <audio id="bgMusic">
