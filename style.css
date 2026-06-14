@@ -250,7 +250,7 @@ accent-color: #ff6b35;
     border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
-.recent-track {
+.recent-song {
     display: flex;
     gap: 10px;
 
@@ -268,16 +268,16 @@ accent-color: #ff6b35;
     transition: .2s ease;
 }
 
-.recent-track:hover {
+.recent-song:hover {
     background: rgba(255,255,255,.05);
     border-color: rgba(255,107,53,.3);
 }
 
-.recent-track:last-child {
+.recent-song:last-child {
     margin-bottom: 0;
 }
 
-.recent-track img {
+.recent-song img {
 width: 40px;
 height: 40px;
 
